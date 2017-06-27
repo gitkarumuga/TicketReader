@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketReader.App"
+             xmlns:infra="clr-namespace:TicketReader.Infrastructure;assembly=TicketReader">
+    
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+
+            <!-- Color Resources -->
+            <!--<Color x:Key="BackgroundColor">#3034FC</Color>-->
+            <Color x:Key="BackgroundColor">#4E55DA</Color>
+            <Color x:Key="FontColor">Black</Color>
+            <Color x:Key="ButtonColor">Green</Color>
+            
+            <!-- Style Resources -->
+            <Style x:Key="NormalEntryStyle" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="PlaceholderColor" Value="Black"/>
+                <Setter Property="TextColor" Value="{StaticResource FontColor}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="#E5E3E4"/>
+            </Style>
+            <Style x:Key="NormalButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            
+            <Style x:Key="DynamicLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontSize" Value="Large"/>
+            </Style>
+        </ResourceDictionary>
+
+	</Application.Resources>
+    
+</Application>

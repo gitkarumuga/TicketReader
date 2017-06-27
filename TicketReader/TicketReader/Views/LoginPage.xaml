@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketReader.Views.LoginPage"
+             Title="Login"
+             BackgroundImage="background_cubes.png"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    
+    <ContentPage.Content>
+        <!--<StackLayout
+            BackgroundColor="AliceBlue"
+            BindingContext="{Binding Login}">-->
+
+        <!--BackgroundColor="{StaticResource BackgroundColor}"-->
+
+        <StackLayout
+                BindingContext="{Binding Login}"
+                Margin="0, 150, 0, 150"
+                Spacing="5"
+                Padding="10">
+                <Entry 
+                    Text="{Binding UserId}"
+                    Placeholder="Enter Email id..."
+                    Keyboard="Email"
+                    Style="{StaticResource NormalEntryStyle}">
+                </Entry>
+                <Entry
+                    Text="{Binding Password}"
+                    Placeholder="Enter Password..."
+                    IsPassword="True"
+                    Style="{StaticResource NormalEntryStyle}">
+                </Entry>
+                <ActivityIndicator 
+                    Color="Green"
+                    IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+                <Button
+                    Text="LOGIN"
+                    Command="{Binding LoginUserCommand}"
+                    IsEnabled="{Binding IsEnabled}"
+                    Style="{StaticResource NormalButtonStyle}">
+                </Button>
+            </StackLayout>
+        <!--</StackLayout>-->
+    </ContentPage.Content>
+    
+</ContentPage>
